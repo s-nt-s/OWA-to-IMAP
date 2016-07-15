@@ -1,10 +1,10 @@
 **Problema**: Nos vemos obligados a utilizar una cuenta que permite únicamente acceso por OWA (outlook web access) cuyos servidores tienen deshabilitado el acceso POP y además tampoco funcionan las reglas de reenvió
 
-**Solución 1º**: Usar davmail para crear un acceso pop o imap
+**Solución 1º**: Usar [davmail](http://davmail.sourceforge.net/serversetup.html) para crear un acceso pop o imap
 
 **Problema de la solucón 1º**:  La cuenta que va a leer desde ese acceso pop nos va a pedir que usemos un certificado SSL no auto firmado y ni queremos pagarlo ni queremos dar acceso a nuestra cuenta sin encriptar
 
-**Solución**: davmail + pop2imap + cuenta intermedia + nuestra cuenta final
+**Solución**: [davmail](http://davmail.sourceforge.net/serversetup.html) + [pop2imap](http://www.linux-france.org/prj/pop2imap/) + cuenta intermedia + nuestra cuenta final
 
 1- Crear directorio para el script e instalar las herramientas necesarias
 
@@ -83,5 +83,5 @@ pi@bot ~ $ crontab -e
 
 Ahora nuestra cuenta final puede leer vía pop de la cuenta intermedia (que funciona como espejo del owa) sin problemas.
 
-**Nota**: Se podría usar la salida imap que da davmail para migrar de imap a imap pero según la documentación de davmail su acceso pop es más eficiente. También se podría pensar en prescindir de la cuenta intermedia y cargarlo todo en la cuenta final pero entonces no se ejecutarían nuestros filtros sobre este correo entrante y además si borrásemos un mail este volvería a aparecer en la próxima sincronización.
+**Nota**: Se podría usar la salida imap que da davmail para [migrar de imap a imap](http://imapsync.lamiral.info/) pero según la documentación de davmail su acceso pop es más eficiente. También se podría pensar en prescindir de la cuenta intermedia y cargarlo todo en la cuenta final pero entonces no se ejecutarían nuestros filtros sobre este correo entrante y además si borrásemos un mail este volvería a aparecer en la próxima sincronización.
 
