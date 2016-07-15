@@ -21,7 +21,7 @@ while read linea; do
 
 	pid=$(ps -ef | grep davmail  | sed '/ grep /d' | awk '{print $2}')
 	pi2=$(pgrep pop2imap)
-	
+
 	if [ "$pid" != "" ]; then
 		log "Detenemos davmail colgado ($pid)"
 		kill "$pid"
