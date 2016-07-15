@@ -83,5 +83,7 @@ pi@bot ~ $ crontab -e
 
 Ahora nuestra cuenta final puede leer vía pop de la cuenta intermedia (que funciona como espejo del owa) sin problemas.
 
-**Nota**: Se podría usar la salida imap que da davmail para [migrar de imap a imap](http://imapsync.lamiral.info/) pero según la documentación de davmail su acceso pop es más eficiente. También se podría pensar en prescindir de la cuenta intermedia y cargarlo todo en la cuenta final pero entonces no se ejecutarían nuestros filtros sobre este correo entrante y además si borrásemos un mail este volvería a aparecer en la próxima sincronización.
+**Nota 1**: Se podría usar la salida imap que da davmail para [migrar de imap a imap](http://imapsync.lamiral.info/) pero según la documentación de davmail su acceso pop es más eficiente. También se podría pensar en prescindir de la cuenta intermedia y cargarlo todo en la cuenta final pero entonces no se ejecutarían nuestros filtros sobre este correo entrante y además si borrásemos un mail este volvería a aparecer en la próxima sincronización.
+
+**Nota 2**: Si davmail no detecta el EWS de tu cuenta OWA prueba a extraer la ruta exacta usando https://testconnectivity.microsoft.com -> Microsoft Office Outlook Connectivity Tests -> Outlook Autodiscover -> EwsUrl
 
