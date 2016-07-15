@@ -1,10 +1,10 @@
 **Problema**: Nos vemos obligados a utilizar una cuenta que permite únicamente acceso por OWA (outlook web access) cuyos servidores tienen deshabilitado el acceso POP y además tampoco funcionan las reglas de reenvió
 
-**Solución 1º**: Usar [davmail](http://davmail.sourceforge.net/serversetup.html) para crear un acceso pop o imap
+**Solución**: Usar [davmail](http://davmail.sourceforge.net/serversetup.html) para crear un acceso pop o imap
 
 **Problema de la solucón 1º**:  La cuenta que va a leer desde ese acceso pop nos va a pedir que usemos un certificado SSL no auto firmado y ni queremos pagarlo ni queremos dar acceso a nuestra cuenta sin encriptar
 
-**Solución**: [davmail](http://davmail.sourceforge.net/serversetup.html) + [pop2imap](http://www.linux-france.org/prj/pop2imap/) + cuenta intermedia + nuestra cuenta final
+**Solución final**: [davmail](http://davmail.sourceforge.net/serversetup.html) + [pop2imap](http://www.linux-france.org/prj/pop2imap/) + cuenta intermedia + nuestra cuenta final
 
 1- Crear directorio para el script e instalar las herramientas necesarias
 
