@@ -1,0 +1,7 @@
+davmail.*
+lib
+*.cnf
+notif.*
+*.txt
+*.xml
+
