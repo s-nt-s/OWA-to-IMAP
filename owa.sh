@@ -3,13 +3,14 @@
 show=$1
 
 log() {
-	if [ $show == "--show" ]; then
+	if [ "$show" == "--show" ]; then
 		echo "$1"
 	fi
 	echo "$1" >> owa.log
 }
 
-cd ~/.owa
+DIR=$(dirname $(realpath $0))
+cd $DIR
 
 IFS=" " read OUT usr2 pas2 imp prt fld < output.cnf
 
